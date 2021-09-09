@@ -5,6 +5,7 @@ public class Main {
         Metodo metodo =  new Metodo();
         //metodo.numerosImparesWhile();
         //metodo.numerosImparesFor();
-        metodo.comprobarNumero();
+        //metodo.comprobarNumero();
+        metodo.diaSemana();
     }
 }
