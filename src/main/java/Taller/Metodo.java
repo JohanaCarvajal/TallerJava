@@ -21,6 +21,42 @@ public class Metodo {
     }
 
     public void numerosImparesWhile(){
+        int i=1;
+
+        while (i<=100){
+            System.out.println (i);
+            i= i+2;
+        }
+    }
+    public void numerosImparesFor(){
+        int num =1;
+        for (int i=0; num<=100; i++){
+            System.out.println(num);
+            num= num+2;
+
+        }
+    }
+
+    public void comprobarNumero(){
+        int numero;
+        try{
+            do{
+                numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
+                System.out.println("El numero ingresado es: " +numero);
+                if (numero>=0){
+                    System.out.println("El numero ingresado es: "+numero);
+                }else System.out.println("Debe ser mayor o igual a cero, intente de nuevo");
+
+            }while(numero >=0 );
+        }catch (Exception e){
+            System.out.println("Solo se permite ingreso de números\n ¡intente de nuevo!");
+        }
+
+
+    }
+
+
+    /*public void numerosImparesWhile(){
         boolean esPrimo = true;
         int numero =100, divisor = 2;
 
@@ -39,6 +75,6 @@ public class Metodo {
                 numero--;
         }
 
-    }
+    }*/
 
     }
