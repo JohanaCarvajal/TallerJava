@@ -6,6 +6,10 @@ public class Main {
         //metodo.numerosImparesWhile();
         //metodo.numerosImparesFor();
         //metodo.comprobarNumero();
-        metodo.diaSemana();
+        //metodo.diaSemana();
+        //metodo.reemplazar();
+        //metodo.eliminarEspacios();
+        //metodo.longitudFrase();
+        metodo.compararPalabras();
     }
 }

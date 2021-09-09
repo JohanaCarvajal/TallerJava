@@ -100,7 +100,50 @@ public class Metodo {
         }catch (Exception e){
             System.out.println("la opción ingresada No es válida");
             }
+    }
+    public void reemplazar(){
+        String frase = "La sonrisa sera la mejor arma contra la tristeza\t";
+        String frase2;
+        frase2 = JOptionPane.showInputDialog("Ingrese una frase");
+        System.out.println("La frase completa es : " + frase.concat(frase2));
+        frase = frase.replace("a","e");
+        System.out.println("La frase reemplazada es: " +frase);
+    }
 
+    public void eliminarEspacios (){
+        String frase;
+        frase = JOptionPane.showInputDialog("Ingrese una frase");
+        System.out.println("La frase sin espacios es: "+frase.replaceAll("\\s",""));
+    }
+    public void longitudFrase() {
+        String frase;
+        int cont = 0;
+        frase = JOptionPane.showInputDialog("Ingrese una frase");
+        System.out.println("La cantidad de caracteres de la frase :" + frase + "\tes\t" + frase.length());
+        for (int i = 0; i< frase.length(); i++) {
+            if ((frase.charAt(i) == 'a') || (frase.charAt(i) == 'e') || (frase.charAt(i) == 'i') ||
+                    (frase.charAt(i) == 'o') || (frase.charAt(i) == 'u')) ;
+            cont++;
+        }
+        System.out.println("La frase tiene: " + cont+ "\tvocales");
+    }
 
+    public void compararPalabras(){
+        String palabra1, palabra2;
+        int salida;
+        palabra1 = JOptionPane.showInputDialog("Ingrese una palabra");
+        palabra2 = JOptionPane.showInputDialog("Ingrese otra palabra");
+        salida = palabra1.compareToIgnoreCase(palabra2);
+            if (salida <0){
+                System.out.println(palabra1+"\ttiene menos letras que\t"+palabra2);
+            }else if (salida==0){
+                System.out.println(palabra1+"\ty\t"+palabra2+"\tson iguales\t");
+            }else {
+                System.out.println(palabra1+"\ttiene mas letras que "+palabra2);
+            }
+    }
+
+    public void Date(){
+        
     }
 }
