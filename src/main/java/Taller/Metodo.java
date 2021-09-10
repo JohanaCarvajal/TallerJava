@@ -1,6 +1,8 @@
 package Taller;
 
 import javax.swing.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Metodo {
 
@@ -143,7 +145,68 @@ public class Metodo {
             }
     }
 
-    public void Date(){
-        
+    public void consultarDate(){
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        System.out.println("La fecha podrá interpretarla en el siguiente formato:\n" +
+                "año/mes/dia HH:mm:ss \n"+dtf.format(LocalDateTime.now()));
     }
-}
+    public void saldosDos() {
+        int num;
+        num = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
+
+        while (num <= 1000) {
+            System.out.println(num);
+            num = num + 2;
+        }
+    }
+    public void menuOpciones(){
+        int option;
+        do {
+            option = Integer.parseInt(JOptionPane.showInputDialog(
+                    null, "Bienvenido, seleccione una opción: \n\n" +
+                            "1) Nuevo actor.\n" +
+                            "2) Buscar actor.\n" +
+                            "3) Eliminar actor.\n" +
+                            "4) Modificar actor.\n" +
+                            "5) Ver todos los actores.\n" +
+                            "6) Ver peliculas de los actores\n" +
+                            "7) Ver categoriade las peliculas de los actores\n" +
+                            "8) Salir.", "GESTION CINEMATOGRAFICA", JOptionPane.PLAIN_MESSAGE));
+
+            switch (option) {
+
+                case 1:
+                    break;
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+
+                case 4:
+                    break;
+
+                case 5:
+                    break;
+
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    JOptionPane.showMessageDialog(null, "Adios!", "Close application", JOptionPane.INFORMATION_MESSAGE);
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "opción inválida!");
+            }
+
+        } while (option != 0);
+    }
+
+
+    }
+
+
+
+

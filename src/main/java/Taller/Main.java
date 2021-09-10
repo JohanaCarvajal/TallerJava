@@ -9,7 +9,11 @@ public class Main {
         //metodo.diaSemana();
         //metodo.reemplazar();
         //metodo.eliminarEspacios();
+
         //metodo.longitudFrase();
-        metodo.compararPalabras();
+        //metodo.compararPalabras();
+        //metodo.consultarDate();
+        //metodo.saldosDos();
+        metodo.menuOpciones();
     }
 }
