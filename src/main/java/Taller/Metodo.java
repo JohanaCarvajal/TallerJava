@@ -202,9 +202,6 @@ public class Metodo {
         } while (option != 0);
     }
 
-
-
-
     }
 
 

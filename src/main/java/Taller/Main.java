@@ -90,19 +90,19 @@ public class Main {
                         metodo.menuOpciones();
                         break;
                     case 16:
-                        persona.add(Ejecutable.addDatosPartOne());
-                        persona.add(Ejecutable.addDatosPartTwo());
-                        Ejecutable persona1 = new Ejecutable();
+                        persona.add(EjecutablePersona.addDatosPartOne());
+                        persona.add(EjecutablePersona.addDatosPartTwo());
+                        EjecutablePersona persona1 = new EjecutablePersona();
                         persona1.calcularIMC();
                         persona1.esMayorDeEdad();
                         persona1.imprimir();
 
-                        Ejecutable persona2 = new Ejecutable();
+                        EjecutablePersona persona2 = new EjecutablePersona();
                         persona2.calcularIMC();
                         persona2.esMayorDeEdad();
                         persona2.imprimir();
 
-                        Ejecutable personas3 = new Ejecutable();
+                        EjecutablePersona personas3 = new EjecutablePersona();
                         personas3.calcularIMC();
                         personas3.esMayorDeEdad();
                         personas3.imprimir();
@@ -113,6 +113,36 @@ public class Main {
                         persona3.setSexo("H");
                         persona3.setPeso(65);
                         persona3.setAltura(1.50);
+                        break;
+                    case 17:
+                        Televisor Tv1 = new Televisor(100, "Blanco", 'F', 25, 40, true);
+                        Televisor Tv2 = new Televisor(100, "Negro", 'E', 32, 45, true);
+                        Televisor Tv3 = new Televisor(100, "rojo", 'C', 22, 41, false);
+                        Televisor Tv4 = new Televisor(100, "amarillo", 'A', 12, 24, true);
+                        Televisor Tv5 = new Televisor(100, "gris", 'A', 25, 80, false);
+
+                        Lavadora lavadora1 = new Lavadora(100, 145);
+                        Lavadora lavadora2 = new Lavadora(100, "gris", 'B', 120, 35);
+                        Lavadora lavadora3 = new Lavadora(100, "negro", 'F', 110, 48);
+                        Lavadora lavadora5 = new Lavadora(100, 135);
+                        Lavadora lavadora4 = new Lavadora(100, "negro", 'A', 110, 125);
+
+                        ArrayList<Electrodomestico> electrodomesticos = new ArrayList<Electrodomestico>();
+                        electrodomesticos.add(Tv1); electrodomesticos.add(Tv2); electrodomesticos.add(Tv3);
+                        electrodomesticos.add(Tv4);electrodomesticos.add(Tv5); electrodomesticos.add(lavadora1);
+                        electrodomesticos.add(lavadora2); electrodomesticos.add(lavadora3); electrodomesticos.add(lavadora4);
+                        electrodomesticos.add(lavadora5);
+                        double precioTotal = 0;
+                        for (int i = 0; i < electrodomesticos.size(); i++){
+                            if(i < 5){
+                                System.out.println("TV #" + (i+1) + " -> Precio: " + electrodomesticos.get(i).precioFinal());
+                                precioTotal += electrodomesticos.get(i).precioFinal();
+                            }else if(i >= 5){
+                                System.out.println("Lavadora #" + (i+1) + " -> Precio: " + electrodomesticos.get(i).precioFinal());
+                                precioTotal += electrodomesticos.get(i).precioFinal();
+                            }
+                        }
+                        System.out.println("El precio total de los electrodomesticos es: $" + precioTotal);
                         break;
                     case 0:
                         JOptionPane.showMessageDialog(null, "Adios!", "Cerrar aplicacion", JOptionPane.INFORMATION_MESSAGE);

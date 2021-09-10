@@ -2,7 +2,7 @@ package Taller;
 
 import javax.swing.*;
 
-public class Ejecutable {
+public class EjecutablePersona {
 
     public static Persona addDatosPartOne(){
         String nombre = JOptionPane.showInputDialog("Ingrese su nombre");
