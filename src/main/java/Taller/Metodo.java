@@ -6,6 +6,9 @@ import java.time.format.DateTimeFormatter;
 
 public class Metodo {
 
+    public void esMayor(){
+        int num1, num2;
+    }
 
     public void calcularArea() {
         double radio, area;

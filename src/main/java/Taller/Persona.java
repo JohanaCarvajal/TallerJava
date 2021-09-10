@@ -26,7 +26,6 @@ public class Persona<sexo> {
 
     }
     public Persona(String nombre,  int edad, String sexo,double peso, double altura){
-
     }
 
     public void setNombre(String nombre) {
@@ -67,5 +66,25 @@ public class Persona<sexo> {
 
     public double getAltura() {
         return altura;
+    }
+    public String getDNI() {
+        return DNI;
+    }
+    private boolean isDNIValid(int randomDNI) {
+        return (String.valueOf(randomDNI).length() == 8) ? true : false;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", DNI='" + DNI + '\'' +
+                ", edad=" + edad +
+                ", sexo='" + sexo + '\'' +
+                ", peso=" + peso +
+                ", altura=" + altura +
+                '}';
     }
 }

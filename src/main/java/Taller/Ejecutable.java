@@ -23,19 +23,35 @@ public class Ejecutable {
         return new Persona(nombre, edad, sexo);
     }
 
-    /*public double calcularIMC() {
+    public double calcularIMC(double peso, double altura) {
+        int peso_ideal = -1;
+        int debajo_ideal = 0;
+        int sobrepeso = 1;
+
         double imc;
         imc = peso / Math.pow(altura, 2);
         if (imc<20){
-            return -1;
+            System.out.println("El resultado es "+peso_ideal+"Sginifica que tiene un peso ideal");
         }else if (imc>20&&imc<=25){
-            return 0;
+            System.out.println("El resultado es "+debajo_ideal+"Sginifica que está por debajo de su peso ideal");
         }else{
-            return 1;
+            System.out.println("El resultado es "+sobrepeso+"Sginifica que tienes sobepeso");
         }
-    }*/
-
-    public void esMayorDeEdad(){
-
+        return imc;
     }
+
+    public boolean esMayorDeEdad(int edad){
+        boolean esMayor = false;
+            if(edad>=18){
+                esMayor= true;
+            }
+        return esMayor;
+    }
+
+    public void validarSexo(char sexo){
+        if(sexo != sexo) {
+            sexo = 'H';
+        }
+    }
+
 }
