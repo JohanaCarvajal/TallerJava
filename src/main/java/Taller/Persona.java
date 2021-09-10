@@ -64,17 +64,12 @@ public class Persona<sexo> {
         return peso;
     }
 
-    public double getAltura() {
+    public double getAltura(double v) {
         return altura;
     }
     public String getDNI() {
         return DNI;
     }
-    private boolean isDNIValid(int randomDNI) {
-        return (String.valueOf(randomDNI).length() == 8) ? true : false;
-    }
-
-
 
     @Override
     public String toString() {

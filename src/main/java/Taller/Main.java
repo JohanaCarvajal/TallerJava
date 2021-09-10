@@ -1,10 +1,12 @@
 package Taller;
 
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
+        ArrayList<Persona> persona = new ArrayList<>();
         Metodo metodo = new Metodo();
         try {
             int opcion;
@@ -88,6 +90,29 @@ public class Main {
                         metodo.menuOpciones();
                         break;
                     case 16:
+                        persona.add(Ejecutable.addDatosPartOne());
+                        persona.add(Ejecutable.addDatosPartTwo());
+                        Ejecutable persona1 = new Ejecutable();
+                        persona1.calcularIMC();
+                        persona1.esMayorDeEdad();
+                        persona1.imprimir();
+
+                        Ejecutable persona2 = new Ejecutable();
+                        persona2.calcularIMC();
+                        persona2.esMayorDeEdad();
+                        persona2.imprimir();
+
+                        Ejecutable personas3 = new Ejecutable();
+                        personas3.calcularIMC();
+                        personas3.esMayorDeEdad();
+                        personas3.imprimir();
+
+                        Persona persona3 = new Persona();
+                        persona3.setNombre("Juan carlos");
+                        persona3.setEdad(18);
+                        persona3.setSexo("H");
+                        persona3.setPeso(65);
+                        persona3.setAltura(1.50);
                         break;
                     case 0:
                         JOptionPane.showMessageDialog(null, "Adios!", "Cerrar aplicacion", JOptionPane.INFORMATION_MESSAGE);

@@ -23,7 +23,8 @@ public class Ejecutable {
         return new Persona(nombre, edad, sexo);
     }
 
-    public double calcularIMC(double peso, double altura) {
+    public double calcularIMC() {
+        double peso =0, altura =0;
         int peso_ideal = -1;
         int debajo_ideal = 0;
         int sobrepeso = 1;
@@ -40,7 +41,8 @@ public class Ejecutable {
         return imc;
     }
 
-    public boolean esMayorDeEdad(int edad){
+    public boolean esMayorDeEdad(){
+        int edad = 0;
         boolean esMayor = false;
             if(edad>=18){
                 esMayor= true;
@@ -52,6 +54,10 @@ public class Ejecutable {
         if(sexo != sexo) {
             sexo = 'H';
         }
+    }
+
+    public void imprimir (){
+        System.out.println(toString());
     }
 
 }
