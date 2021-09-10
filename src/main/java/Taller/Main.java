@@ -7,12 +7,8 @@ public class Main {
     public static void main(String[] args) {
         Metodo metodo = new Metodo();
         try {
-
             int opcion;
-
             do {
-
-
                 opcion = Integer.parseInt(JOptionPane.showInputDialog(
                         null, "Bienvenido, Seleccione una opcion: \n\n" +
                                 "1) Numero Mayor\n" +
@@ -34,35 +30,65 @@ public class Main {
                                 "17) Superclase Electrodomestico.\n" +
                                 "18) Clase Serie.\n" +
                                 "0) Salir.", "TALLER DE JAVA", JOptionPane.PLAIN_MESSAGE));
-
                 switch (opcion) {
                     case 1:
-                    
+                        metodo.esMayor(5,7);
                         break;
-
                     case 2:
-
+                        int num1 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
+                        int num2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese otro numero"));
+                        metodo.esMayor(num1,num2);
                         break;
-
                     case 3:
-
-
+                        double radio = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el radio"));
+                        metodo.calcularArea(radio);
                         break;
-
                     case 4:
-
-
+                        double precioInicial = Double.parseDouble(JOptionPane.showInputDialog
+                                ("Ingrese el el precio del producto"));
+                        metodo.calcularIva(precioInicial);
                         break;
-
                     case 5:
-
-
+                        metodo.numerosImparesWhile();
                         break;
-
                     case 6:
-
+                        metodo.numerosImparesFor();
                         break;
-
+                    case 7:
+                        int numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
+                        metodo.comprobarNumero(numero);
+                        break;
+                    case 8:
+                        metodo.diaSemana();
+                        break;
+                    case 9:
+                        String frase = "La sonrisa sera la mejor arma contra la tristeza\t";
+                        String frase2 = JOptionPane.showInputDialog("Ingrese una frase");
+                        metodo.reemplazar(frase, frase2);
+                        break;
+                    case 10:
+                        metodo.eliminarEspacios();
+                        break;
+                    case 11:
+                        metodo.longitudFrase();
+                        break;
+                    case 12:
+                        String palabra1 = JOptionPane.showInputDialog("Ingrese una palabra");
+                        String palabra2 = JOptionPane.showInputDialog("Ingrese otra palabra");
+                        metodo.compararPalabras(palabra1,palabra2);
+                        break;
+                    case 13:
+                        metodo.consultarDate();
+                        break;
+                    case 14:
+                        int num = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
+                        metodo.saldosDos(num);
+                        break;
+                    case 15:
+                        metodo.menuOpciones();
+                        break;
+                    case 16:
+                        break;
                     case 0:
                         JOptionPane.showMessageDialog(null, "Adios!", "Cerrar aplicacion", JOptionPane.INFORMATION_MESSAGE);
                         break;
@@ -75,20 +101,6 @@ public class Main {
         } catch (Exception e) {
             System.out.println("Debe ingresar números y no letras");
         }
-
-
-        //metodo.numerosImparesWhile();
-        //metodo.numerosImparesFor();
-        //metodo.comprobarNumero();
-        //metodo.diaSemana();
-        //metodo.reemplazar();
-        //metodo.eliminarEspacios();
-
-        //metodo.longitudFrase();
-        //metodo.compararPalabras();
-        //metodo.consultarDate();
-        //metodo.saldosDos();
-        //metodo.menuOpciones();
     }
 }
 

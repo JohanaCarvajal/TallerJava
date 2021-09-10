@@ -6,20 +6,25 @@ import java.time.format.DateTimeFormatter;
 
 public class Metodo {
 
-    public void esMayor(){
-        int num1, num2;
+    public void esMayor(int num1, int num2){
+        if (num1 > num2){
+            System.out.println("El numero mayor es: "+num1);
+        }else if (num2>num1){
+            System.out.println("El numero mayor es: "+num2);
+        }else{
+            System.out.println("Ambos numeros son iguales");
+        }
     }
 
-    public void calcularArea() {
-        double radio, area;
-        radio = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el radio"));
+    public void calcularArea(double radio) {
+        double area;
         area = Math.PI * Math.pow(radio, 2);
         System.out.println("El area del circulo es " + area);
     }
 
-    public void calcularIva() {
-        double precioInicial = 0;
-        precioInicial = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el el precio del producto"));
+    public void calcularIva(double precioInicial) {
+
+
         double precioFinal = precioInicial + (precioInicial * 0.21);
         System.out.println("El valor del producto es " + precioFinal);
     }
@@ -38,15 +43,14 @@ public class Metodo {
         for (int i = 0; num <= 100; i++) {
             System.out.println(num);
             num = num + 2;
-
         }
     }
 
-    public void comprobarNumero() {
-        int numero;
+    public void comprobarNumero(int numero) {
+
         try {
             do {
-                numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
+
                 System.out.println("El numero ingresado es: " + numero);
                 if (numero >= 0) {
                     System.out.println("El numero ingresado es: " + numero);
@@ -106,10 +110,7 @@ public class Metodo {
             System.out.println("la opción ingresada No es válida");
             }
     }
-    public void reemplazar(){
-        String frase = "La sonrisa sera la mejor arma contra la tristeza\t";
-        String frase2;
-        frase2 = JOptionPane.showInputDialog("Ingrese una frase");
+    public void reemplazar(String frase, String frase2){
         System.out.println("La frase completa es : " + frase.concat(frase2));
         frase = frase.replace("a","e");
         System.out.println("La frase reemplazada es: " +frase);
@@ -133,11 +134,8 @@ public class Metodo {
         System.out.println("La frase tiene: " + cont+ "\tvocales");
     }
 
-    public void compararPalabras(){
-        String palabra1, palabra2;
+    public void compararPalabras(String palabra1, String palabra2){
         int salida;
-        palabra1 = JOptionPane.showInputDialog("Ingrese una palabra");
-        palabra2 = JOptionPane.showInputDialog("Ingrese otra palabra");
         salida = palabra1.compareToIgnoreCase(palabra2);
             if (salida <0){
                 System.out.println(palabra1+"\ttiene menos letras que\t"+palabra2);
@@ -153,10 +151,7 @@ public class Metodo {
         System.out.println("La fecha podrá interpretarla en el siguiente formato:\n" +
                 "año/mes/dia HH:mm:ss \n"+dtf.format(LocalDateTime.now()));
     }
-    public void saldosDos() {
-        int num;
-        num = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero"));
-
+    public void saldosDos(int num) {
         while (num <= 1000) {
             System.out.println(num);
             num = num + 2;
