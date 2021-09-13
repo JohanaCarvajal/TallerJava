@@ -5,13 +5,13 @@ public class Videojuego implements Entregable {
     private int horasEstimadas = 10;
     private boolean itsEntregado = false;
     private String genero = "";
-    private String compañia = "";
+    private String compania = "";
 
-    public Videojuego(String titulo, int horasEstimadas, String genero, String compañia) {
+    public Videojuego(String titulo, int horasEstimadas, String genero, String compania) {
         this.titulo = titulo;
         this.horasEstimadas = horasEstimadas;
         this.genero = genero;
-        this.compañia = compañia;
+        this.compania = compania;
     }
 
     public Videojuego(String titulo, int horasEstimadas) {
@@ -29,7 +29,7 @@ public class Videojuego implements Entregable {
                 ", horasEstimadas=" + horasEstimadas +
                 ", itsEntregado=" + itsEntregado +
                 ", genero='" + genero + '\'' +
-                ", compañia='" + compañia + '\'' +
+                ", compañia='" + compania + '\'' +
                 '}';
     }
 
@@ -57,12 +57,12 @@ public class Videojuego implements Entregable {
         this.genero = genero;
     }
 
-    public String getCompañia() {
-        return compañia;
+    public String getCompania() {
+        return compania;
     }
 
-    public void setCompañia(String compañia) {
-        this.compañia = compañia;
+    public void setCompania(String compania) {
+        this.compania = compania;
     }
 
 

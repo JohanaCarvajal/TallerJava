@@ -94,19 +94,19 @@ public class Main {
                         metodo.menuOpciones();
                         break;
                     case 16:
-                        persona.add(EjecutablePersona.addDatosPartOne());
-                        persona.add(EjecutablePersona.addDatosPartTwo());
-                        EjecutablePersona persona1 = new EjecutablePersona();
+                        persona.add(Ejecutable.addDatosPartOne());
+                        persona.add(Ejecutable.addDatosPartTwo());
+                        Ejecutable persona1 = new Ejecutable();
                         persona1.calcularIMC();
                         persona1.esMayorDeEdad();
                         persona1.imprimir();
 
-                        EjecutablePersona persona2 = new EjecutablePersona();
+                        Ejecutable persona2 = new Ejecutable();
                         persona2.calcularIMC();
                         persona2.esMayorDeEdad();
                         persona2.imprimir();
 
-                        EjecutablePersona personas3 = new EjecutablePersona();
+                        Ejecutable personas3 = new Ejecutable();
                         personas3.calcularIMC();
                         personas3.esMayorDeEdad();
                         personas3.imprimir();
@@ -149,17 +149,17 @@ public class Main {
                         System.out.println("El precio total de los electrodomesticos es: $" + precioTotal);
                         break;
                     case 18:
-                        Videojuego vdj1 = new Videojuego("League of Legends",1, "MMORPG", "RiotGames");
-                        Videojuego vdj2 = new Videojuego("Minecraft",1000, "Survival", "Mojang");
-                        Videojuego vdj3 = new Videojuego("Resident Evil 4",3, "Terror/Accion", "CONAMI");
-                        Videojuego vdj4 = new Videojuego("God Of War",4, "Accion", "Sony");
-                        Videojuego vdj5 = new Videojuego("GTA V",22, "Accion", "Rockstar");
+                        Videojuego vdj1 = new Videojuego("The Legend of Zelda",50, "MMORPG", "Nintendo ");
+                        Videojuego vdj2 = new Videojuego("Tony Hawk's Pro Skater",1000, "Survival", "Neversoft");
+                        Videojuego vdj3 = new Videojuego("Soul Calibur",3, "Terror/Accion", "Namco");
+                        Videojuego vdj4 = new Videojuego("Super Mario Galaxy",100, "Accion", "Nintendo");
+                        Videojuego vdj5 = new Videojuego("Perfect Dark",20, "Accion", "Rare");
 
-                        Serie sr1 = new Serie(2, "Sex Education", "Teenagers", "Netflix");
-                        Serie sr2 = new Serie(3, "Tensei Shitara Slime Datta Ken", "Isekai", "Fuse");
-                        Serie sr3 = new Serie(6, "Vikingos", "Accion/Historico", "Netflix");
-                        Serie sr4 = new Serie(1, "Tokyo revengers", "Isekai/accion", "Ken Wakui");
-                        Serie sr5 = new Serie(5, "Rick & Morty", "Ciencia Ficcion", "Justin Roiland");
+                        Serie sr1 = new Serie(2, "Combat continent", "Donghua", "Tensen");
+                        Serie sr2 = new Serie(3, "Doupo Cangqiong", "Cultivo", "Bilibili");
+                        Serie sr3 = new Serie(6, "Overlord", "Isekai", "Kugane Maruyama");
+                        Serie sr4 = new Serie(1, "Jojo's bizarre adventure", "shonen", "Hirohiko Araki");
+                        Serie sr5 = new Serie(5, "Monster", "seinen", "Naroki Urasawa");
 
                         videojuegos.add(vdj1);
                         videojuegos.add(vdj2);
